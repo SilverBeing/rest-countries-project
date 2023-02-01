@@ -38,7 +38,7 @@ const SearchInput = () => {
   };
   useEffect(() => {
     searchQuery && fetchCountry(searchQuery);
-  }, [searchQuery]);
+  }, []);
   return (
     <div className="search">
       <form onSubmit={handleSubmit}>
