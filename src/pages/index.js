@@ -1,10 +1,15 @@
 import Head from "next/head";
-
-import { Inter } from "@next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Navbar from "@/components/Navbar";
+import CountryCard from "@/components/CountryCard";
+import SearchandFilter from "@/components/SearchandFilter";
+import useCountries from "@/hooks/useCountries";
+import Loading from "@/components/Loading";
+import { useState } from "react";
+import Pagination from "@/components/Pagination";
 
 export default function Home() {
+  const [isLoading, isError, countries] = useCountries();
+
   return (
     <>
       <Head>
@@ -13,8 +18,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main>
-        <button>Stupid Project</button>
+        <SearchandFilter />
+        {!isLoading ? <Loading /> : <CountryCard />}
+        {/* <CountryCard /> */}
       </main>
     </>
   );
