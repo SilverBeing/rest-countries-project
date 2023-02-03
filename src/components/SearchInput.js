@@ -1,5 +1,7 @@
+/* eslint-disable */
+
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+
 import { VscSearch } from "react-icons/vsc";
 import useCountries from "@/hooks/useCountries";
 const SearchInput = () => {

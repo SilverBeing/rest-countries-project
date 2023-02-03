@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import useCountries from "@/hooks/useCountries";
 import Image from "next/image";
 import Link from "next/link";

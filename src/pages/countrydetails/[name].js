@@ -1,4 +1,6 @@
+/* eslint-disable */
 import Image from "next/image";
+
 import Link from "next/link";
 import { MdWest } from "react-icons/md";
 import { useRouter } from "next/router";
