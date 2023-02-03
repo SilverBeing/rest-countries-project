@@ -1,14 +1,12 @@
 import Head from "next/head";
-import Navbar from "@/components/Navbar";
+
 import CountryCard from "@/components/CountryCard";
 import SearchandFilter from "@/components/SearchandFilter";
 import useCountries from "@/hooks/useCountries";
 import Loading from "@/components/Loading";
-import { useState } from "react";
-import Pagination from "@/components/Pagination";
 
 export default function Home() {
-  const [isLoading, isError, countries] = useCountries();
+  const [isLoading] = useCountries();
 
   return (
     <>
@@ -22,7 +20,6 @@ export default function Home() {
       <main>
         <SearchandFilter />
         {!isLoading ? <Loading /> : <CountryCard />}
-        {/* <CountryCard /> */}
       </main>
     </>
   );
