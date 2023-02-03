@@ -1,7 +1,5 @@
-/* eslint-disable */
-
 import React, { useEffect, useState } from "react";
-
+import { useRouter } from "next/router";
 import { VscSearch } from "react-icons/vsc";
 import useCountries from "@/hooks/useCountries";
 const SearchInput = () => {
@@ -40,7 +38,7 @@ const SearchInput = () => {
   };
   useEffect(() => {
     searchQuery && fetchCountry(searchQuery);
-  }, []);
+  }, [searchQuery]);
   return (
     <div className="search">
       <form onSubmit={handleSubmit}>
